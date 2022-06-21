@@ -65,17 +65,17 @@ function render(array, data, tempType) {
 function detectImage(data) {
   switch (data) {
     case "Rain":
-      return "../media/rain.svg";
+      return "./media/rain.svg";
     case "Thunderstorm":
-      return "../media/thunderstorm.svg";
+      return "./media/thunderstorm.svg";
     case "Drizzle":
-      return "../media/drizzle.svg";
+      return "./media/drizzle.svg";
     case "Snow":
-      return "../media/snow.svg";
+      return "./media/snow.svg";
     case "Clear":
-      return "../media/clear.svg";
+      return "./media/clear.svg";
     case "Clouds":
-      return "../media/clouds.svg";
+      return "./media/clouds.svg";
   }
 }
 
