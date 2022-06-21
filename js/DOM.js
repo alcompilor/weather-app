@@ -13,6 +13,10 @@ const degreeSelect = document.getElementById("degree-select");
 
 const locationIcon = document.getElementById("location-icon");
 
+const appPrimaryEl = document.getElementById("app-primary");
+
+let loaderCalled = false;
+
 const elementArray = [wStatus, wDesc, wTemp, wFeelsLike, wHumidity, wWindSpeed];
 
 function renderEl(element, data, tempType) {
@@ -62,6 +66,26 @@ function render(array, data, tempType) {
   }
 }
 
+function unRender() {
+  wImg.src = "";
+  for (let i = 0; i < elementArray.length; i++) {
+    elementArray[i].textContent = "";
+  }
+}
+
+function sleep(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function loader(ms) {
+  const loader = document.createElement("img");
+  loader.src = "./media/loader.svg";
+  loader.classList.add("main-loader");
+  appPrimaryEl.appendChild(loader);
+  await sleep(ms);
+  appPrimaryEl.removeChild(loader);
+}
+
 function detectImage(data) {
   switch (data) {
     case "Rain":
@@ -89,4 +113,6 @@ export {
   detectImage,
   degreeSelect,
   locationIcon,
+  loader,
+  unRender,
 };

@@ -26,10 +26,11 @@ body {
     padding-bottom: 60px;
     align-items: center;
     box-shadow: 0px 23px 36px -17px rgba(0, 0, 0, 0.3);
-    border-radius: 55px;
+    border-radius: 65px;
     width: 550px;
     background-color: #fff;
     box-sizing: border-box;
+    min-height: 567px;
 }
 
 #app-secondary {
@@ -71,6 +72,7 @@ body {
 
 #weather-status, #weather-desc, #weather-temp, #weather-humidity, #weather-windspeed, #weather-feelslike {
     font-family: 'Quicksand', sans-serif;
+    color: #272343;
 }
 
 #weather-status{

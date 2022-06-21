@@ -9,6 +9,8 @@ import {
   searchInput,
   degreeSelect,
   locationIcon,
+  loader,
+  unRender,
 } from "./DOM.js";
 
 import {
@@ -52,6 +54,7 @@ if (getAutoState() === "true") {
         latitude,
         longitude
       );
+      await loader(500);
       renderEl(wImg, detectImage(weatherData.status));
       render(elementArray, weatherData, getDegree());
       searchInput.value = weatherData.city;
@@ -68,6 +71,8 @@ async function manualFetch(city) {
   try {
     setAutoState(false);
     const weatherData = await weatherReq("manual", city, undefined, undefined);
+    unRender();
+    await loader(500);
     renderEl(wImg, detectImage(weatherData.status));
     render(elementArray, weatherData, getDegree());
   } catch (error) {
