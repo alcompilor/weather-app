@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <script src="./js/app.js" type="module" defer></script>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <div id="app">
+        <div id="app-primary">
+          <img id="weather-image" src="#" alt="" />
+          <div id="app-data">
+            <div id="data-primary">
+              <div id="weather-status"></div>
+              <div id="weather-desc"></div>
+              <div id="weather-temp"></div>
+            </div>
+            <div id="data-secondary">
+              <div id="weather-feelslike"></div>
+              <div id="weather-humidity"></div>
+              <div id="weather-windspeed"></div>
+            </div>
+          </div>
+        </div>
+        <div id="app-secondary">
+          <div id="search-wrapper">
+            <input type="text" placeholder="Name a city.." id="search-input" />
+            <button id="search-submit">
+              <img id="search-icon" src="./media/search-icon.svg" />
+            </button>
+          </div>
+          <div id="degree-toggle">
+            <select name="degree" id="degree-select">
+              <option value="C" selected="">Celsius</option>
+              <option value="F" selected="">Fahrenheit</option>
+            </select>
+          </div>
+          <div id="auto-location">
+            <img
+              id="location-icon"
+              src="./media/gps.svg"
+              title="GPS is disabled"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
