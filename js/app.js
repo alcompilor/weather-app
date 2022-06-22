@@ -84,8 +84,8 @@ searchBtn.addEventListener("click", (e) => {
   if (searchInput.value.trim() === "") {
     return false;
   } else {
-    manualFetch(searchInput.value);
-    storeLocation(searchInput.value);
+    manualFetch(searchInput.value.trim());
+    storeLocation(searchInput.value.trim());
     locationIcon.classList.remove("locationActive");
   }
 });
@@ -95,8 +95,8 @@ searchInput.addEventListener("keypress", (e) => {
     if (searchInput.value.trim() === "") {
       return false;
     } else {
-      manualFetch(searchInput.value);
-      storeLocation(searchInput.value);
+      manualFetch(searchInput.value.trim());
+      storeLocation(searchInput.value.trim());
       locationIcon.classList.remove("locationActive");
     }
   }
