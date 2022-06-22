@@ -178,3 +178,36 @@ body {
 .locationActive {
     filter: brightness(0) saturate(100%) invert(47%) sepia(17%) saturate(1489%) hue-rotate(167deg) brightness(88%) contrast(89%)!important;
 }
+
+/* Autocomplete CSS */
+
+.pac-container{
+    border-radius: 20px;
+    background-color: #fff;
+    top: 495px !important;
+    min-height: 188px;
+    padding: 15px;
+}
+
+.pac-container:after {
+    content: none !important;
+}
+
+.pac-item-query {
+    font-family: 'Quicksand', sans-serif!important;
+}
+
+.pac-icon {
+    display: none!important;
+}
+
+.pac-item {
+    border-top:none !important;
+    color: rgb(39, 35, 67);
+    padding-left: 10px;
+}
+
+.pac-item:hover {
+    background-color: #eaf5ff;
+    border-radius: 10px;
+}

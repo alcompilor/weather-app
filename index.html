@@ -6,6 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
     <script src="./js/app.js" type="module" defer></script>
+    <script type="text/javascript">
+      let autocomplete;
+
+      function initAutocomplete() {
+        autocomplete = new google.maps.places.Autocomplete(
+          document.getElementById("search-input"),
+          {
+            types: ["(cities)"],
+            fields: ["place_id", "geometry", "name"],
+          }
+        );
+      }
+    </script>
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_B1Z0cP250RsRVOgdDI-0ORETieQOWOo&libraries=places&callback=initAutocomplete"
+    ></script>
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
