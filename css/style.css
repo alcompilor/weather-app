@@ -66,6 +66,10 @@ body {
     gap: 30px;
 }
 
+#weather-icon {
+    min-height: 300px;
+}
+
 #weather-image {
     width: 300px;
 }

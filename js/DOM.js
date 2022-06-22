@@ -32,20 +32,20 @@ function renderEl(element, data, tempType) {
         break;
       case "weather-temp":
         if (tempType === "C") {
-          element.textContent = `${Math.floor(data.temp - 273.15)}°C`;
+          element.textContent = `${Math.round(data.temp - 273.15)}°C`;
         } else if (tempType === "F") {
-          element.textContent = `${Math.floor(
+          element.textContent = `${Math.round(
             1.8 * (data.temp - 273.15) + 32
           )}°F`;
         }
         break;
       case "weather-feelslike":
         if (tempType === "C") {
-          element.textContent = `Feels Like: ${Math.floor(
+          element.textContent = `Feels Like: ${Math.round(
             data.feelsLike - 273.15
           )}°C`;
         } else if (tempType === "F") {
-          element.textContent = `Feels Like: ${Math.floor(
+          element.textContent = `Feels Like: ${Math.round(
             1.8 * (data.feelsLike - 273.15) + 32
           )}°F`;
         }
