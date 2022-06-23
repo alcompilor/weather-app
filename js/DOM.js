@@ -101,7 +101,7 @@ function detectImage(data) {
   }
 }
 
-async function manualError() {
+function manualError() {
   appPrimaryEl.innerHTML = "";
   const mError = document.createElement("p");
   mError.id = "manual-error";
