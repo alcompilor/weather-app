@@ -16,7 +16,7 @@ async function weatherReq(method, city, lat, lon) {
       );
       return weatherData;
     } catch (err) {
-      alert("There has been an error fetching weather data from given city.");
+      return "ERR404";
     }
   } else if (method === "auto") {
     try {

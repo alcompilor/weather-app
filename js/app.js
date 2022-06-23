@@ -11,6 +11,7 @@ import {
   locationIcon,
   loader,
   unRender,
+  manualError,
 } from "./DOM.js";
 
 import {
@@ -71,6 +72,11 @@ async function manualFetch(city) {
   try {
     setAutoState(false);
     const weatherData = await weatherReq("manual", city, undefined, undefined);
+    if (weatherData === "ERR404") {
+      await loader(500);
+      manualError();
+      return "error";
+    }
     unRender();
     await loader(500);
     renderEl(wImg, detectImage(weatherData.status));

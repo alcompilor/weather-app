@@ -17,6 +17,14 @@
             fields: ["place_id", "geometry", "name"],
           }
         );
+        autocomplete.addListener("place_changed", function () {
+          localStorage.setItem("autoState", "false");
+          localStorage.setItem(
+            "wLocation",
+            document.getElementById("search-input").value.trim()
+          );
+          window.location.reload();
+        });
       }
     </script>
     <script

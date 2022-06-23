@@ -15,8 +15,6 @@ const locationIcon = document.getElementById("location-icon");
 
 const appPrimaryEl = document.getElementById("app-primary");
 
-let loaderCalled = false;
-
 const elementArray = [wStatus, wDesc, wTemp, wFeelsLike, wHumidity, wWindSpeed];
 
 function renderEl(element, data, tempType) {
@@ -103,6 +101,15 @@ function detectImage(data) {
   }
 }
 
+async function manualError() {
+  appPrimaryEl.innerHTML = "";
+  const mError = document.createElement("p");
+  mError.id = "manual-error";
+  mError.textContent =
+    "ERROR: An error occured when fetching data for the given city, please try another city.";
+  appPrimaryEl.appendChild(mError);
+}
+
 export {
   wImg,
   elementArray,
@@ -115,4 +122,5 @@ export {
   locationIcon,
   loader,
   unRender,
+  manualError,
 };
